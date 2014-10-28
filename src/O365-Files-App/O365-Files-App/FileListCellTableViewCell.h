@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FileListCellTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *fileName;
-@property (weak, nonatomic) IBOutlet UILabel *lastModified;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *subtitle;
 
 @end

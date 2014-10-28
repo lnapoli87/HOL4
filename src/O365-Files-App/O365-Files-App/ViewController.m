@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "FileListViewController.h"
+#import "FolderListViewController.h"
 
 @interface ViewController ()
 
@@ -88,7 +88,7 @@ NSString* token;
         dispatch_async(dispatch_get_main_queue(), ^{
             token = t;
             
-            FileListViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"fileList"];
+            FolderListViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"fileList"];
             controller.token = t;
             
             [self.navigationController pushViewController:controller animated:YES];

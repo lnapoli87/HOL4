@@ -1,5 +1,5 @@
 //
-//  FileListViewController.h
+//  FileDetailsViewController.h
 //  O365-Files-App
 //
 //  Created by Lucas Damian Napoli on 24/10/14.
@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface FileListViewController : ViewController
+@interface FolderContentViewController : ViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) NSString *token;
+@property (weak, nonatomic) IBOutlet UILabel *folderName;
+
 @end

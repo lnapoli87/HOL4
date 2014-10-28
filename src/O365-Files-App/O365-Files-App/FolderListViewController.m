@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 MS Open Tech. All rights reserved.
 //
 
-#import "FileListViewController.h"
+#import "FolderListViewController.h"
 #import "FileListCellTableViewCell.h"
 
-@interface FileListViewController ()
+@interface FolderListViewController ()
 
 @end
 
-@implementation FileListViewController
+@implementation FolderListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,9 +22,9 @@
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = nil;
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.view.tintColor = [UIColor colorWithRed:226.0/255.0 green:37.0/255.0 blue:7.0/255.0 alpha:1];
+    self.navigationController.view.tintColor = [UIColor colorWithRed:13.0/255.0 green:92.0/255.0 blue:173.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:226.0/255.0 green:37.0/255.0 blue:7.0/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:13.0/255.0 green:92.0/255.0 blue:173.0/255.0 alpha:1];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                                                    [UIColor whiteColor], NSForegroundColorAttributeName, nil];
     
@@ -53,15 +53,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* identifier = @"fileListCell";
     FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
-    cell.fileName.text = @"aProject";
-    cell.lastModified.text = @"aDate";
+    cell.title.text = @"aFolder";
     
     return cell;
 }

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:O365-Files-App.xcodeproj">
+      location = "self:O365-Exchange-App.xcodeproj">
    </FileRef>
 </Workspace>

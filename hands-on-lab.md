@@ -1,14 +1,14 @@
-Module XX: *Manage Lists in a O365 tenant with iOS*
+Module XX: *Manage Exchange mailbox in a O365 tenant with iOS*
 ==========================
 
 ##Overview
 
-The lab lets students use an AzureAD account to manage lists in a O365 Sharepoint tenant with an iOS app.
+The lab lets students use an AzureAD account to manage an Exchange mailbox in a O365 tenant with an iOS app.
 
 ##Objectives
 
-- Learn how to create a client for O365 to manage lists and listsItems
-- Learn how to add features to create, edit and delete lists and items within an iOS app.
+- Learn how to create a client for O365 to manage an Exchange mailbox
+- Learn how to add features to list folders and messages
 
 ##Prerequisites
 
@@ -22,9 +22,9 @@ The lab lets students use an AzureAD account to manage lists in a O365 Sharepoin
 
 The hands-on lab includes the following exercises:
 
-- [Add O365 iOS lists sdk library to the project](#exercise1)
+- [Add O365 iOS Exchange sdk library to the project](#exercise1)
 - [Create a Client class for all operations](#exercise2)
-- [Connect actions in the view to ProjectClient class](#exercise3)
+- [Connect actions in the view to ExchangeClient class](#exercise3)
 
 <a name="exercise1"></a>
 ##Exercise 1: Add O365 iOS lists sdk library to a project
