@@ -52,12 +52,12 @@ NSArray<MSOutlookMessage> *folderMessages;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString* identifier = @"fileListCell";
+    NSString* identifier = @"msgListCell";
     FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
     MSOutlookMessage *msg = [folderMessages objectAtIndex:indexPath.row];
     
-    cell.title.text = msg.From.EmailAddress;
+    cell.title.text = msg.From.EmailAddress.Name;
     cell.subtitle.text = msg.BodyPreview;
     
     return cell;

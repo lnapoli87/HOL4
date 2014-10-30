@@ -29,10 +29,18 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    self.author.text = self.currentMsg.From.EmailAddress;
+    self.author.text = self.currentMsg.From.EmailAddress.Name;
     self.subject.text = self.currentMsg.Subject;
-    self.date.text = self.currentMsg.DateTimeSent;
+    
+    self.emailBody.numberOfLines = 0;
+    [self.emailBody sizeToFit];
     self.emailBody.text = self.currentMsg.Body.Content;
+    
+    NSDate *msgDate = self.currentMsg.DateTimeSent;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM-dd-yyyy"];
+    self.date.text = [formatter stringFromDate:msgDate];
 }
 
 - (void)didReceiveMemoryWarning {
