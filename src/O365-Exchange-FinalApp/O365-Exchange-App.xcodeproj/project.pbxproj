@@ -217,8 +217,7 @@
 				D94EB03F19F6DDB600137259 /* Info.plist */,
 				D94EB04019F6DDB600137259 /* main.m */,
 			);
-			name = "O365-Exchange-App";
-			path = "O365-Files-App";
+			path = "O365-Exchange-App";
 			sourceTree = "<group>";
 		};
 		D97AA88D1A0111D60044B940 /* Products */ = {
@@ -530,7 +529,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/office365_odata_base/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/O365-Files-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/O365-Exchange-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "O365-Exchange-App";
@@ -546,7 +545,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/office365_odata_base/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/O365-Files-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/O365-Exchange-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "O365-Exchange-App";
