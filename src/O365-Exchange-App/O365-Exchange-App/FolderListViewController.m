@@ -15,7 +15,6 @@
 @end
 
 @implementation FolderListViewController
-NSArray<MSOutlookFolder> *folders;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

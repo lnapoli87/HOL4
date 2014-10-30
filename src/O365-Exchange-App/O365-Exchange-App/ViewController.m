@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "FolderListViewController.h"
-#import <office365_exchange_sdk/office365_exchange_sdk.h>
 
 @interface ViewController ()
 
@@ -37,10 +36,14 @@ NSString* token;
     resourceId = [NSString alloc];
     clientId = [NSString alloc];
     redirectUriString = [NSString alloc];
-    authority = @"https://login.windows.net/common";
-    redirectUriString = @"http://iossdkhol.hexacta.com";
-    resourceId = @"https://outlook.office365.com";
-    clientId = @"4c0b7730-2ed7-44d1-ba58-c1ec15c61326";
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Auth" ofType:@"plist"];
+    NSDictionary *content = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    authority = [content objectForKey:@"authority"];
+    resourceId = [content objectForKey:@"resourceId"];
+    clientId = [content objectForKey:@"clientId"];
+    redirectUriString = [content objectForKey:@"redirectUriString"];
+    
     token = [NSString alloc];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];

@@ -9,15 +9,12 @@
 #import "FolderContentViewController.h"
 #import "FileListCellTableViewCell.h"
 #import "EmailDetailViewController.h"
-#import <office365_exchange_sdk/office365_exchange_sdk.h>
 
 @interface FolderContentViewController ()
 
 @end
 
 @implementation FolderContentViewController
-
-NSArray<MSOutlookMessage> *folderMessages;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
