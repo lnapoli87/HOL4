@@ -99,7 +99,7 @@ NSArray<MSOutlookMessage> *folderMessages;
     spinner.hidesWhenStopped = YES;
     [spinner startAnimating];
     
-    NSURLSessionTask* task = [[[self.client getMe] getMessages] execute:^(NSArray<MSOutlookMessage> *resultMessages, NSError *error) {
+    NSURLSessionTask* task = [[[[[self.client getMe] getFolders] getById:self.currentFolder.Id] getMessages] execute:^(NSArray<MSOutlookMessage> *resultMessages, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(),
                        ^{
