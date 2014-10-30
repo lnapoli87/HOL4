@@ -33,13 +33,12 @@ NSArray<MSOutlookMessage> *folderMessages;
     
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.folderName.text = self.currentFolder.DisplayName;   
+    self.folderName.text = @"aFolder";
 
 }
 
 -(void) viewDidAppear:(BOOL)animated{
-    self.currentMsg = nil;
-    [self getFolderContent];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,17 +47,15 @@ NSArray<MSOutlookMessage> *folderMessages;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [folderMessages count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* identifier = @"fileListCell";
     FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
-    MSOutlookMessage *msg = [folderMessages objectAtIndex:indexPath.row];
-    
-    cell.title.text = msg.From.EmailAddress;
-    cell.subtitle.text = msg.BodyPreview;
+    cell.title.text = @"sender";
+    cell.subtitle.text = @"bodyPreview";
     
     return cell;
 }
@@ -66,20 +63,16 @@ NSArray<MSOutlookMessage> *folderMessages;
 {
     
     EmailDetailViewController *controller = (EmailDetailViewController *)segue.destinationViewController;
-    controller.currentMsg = self.currentMsg;
     controller.token = self.token;
-    controller.client = self.client;
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.currentMsg= [folderMessages objectAtIndex:indexPath.row];
-    
-    [self performSegueWithIdentifier:@"msgDetail" sender:self];
+
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    return ([identifier isEqualToString:@"msgDetail"] && self.currentMsg);
+    return true;
 }
 
 
@@ -88,28 +81,6 @@ NSArray<MSOutlookMessage> *folderMessages;
 }
 
 
--(void) getFolderContent{
-    double x = ((self.navigationController.view.frame.size.width) - 20)/ 2;
-    double y = ((self.navigationController.view.frame.size.height) - 150)/ 2;
-    UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(x, y, 20, 20)];
-    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    [self.view addSubview:spinner];
-    spinner.hidesWhenStopped = YES;
-    [spinner startAnimating];
-    
-    NSURLSessionTask* task = [[[self.client getMe] getMessages] execute:^(NSArray<MSOutlookMessage> *resultMessages, NSError *error) {
-        
-        dispatch_async(dispatch_get_main_queue(),
-                       ^{
-                           [spinner stopAnimating];
-                           folderMessages = resultMessages;
-                           [self.tableView reloadData];
-                       });
-        
-    }];
-    
-    [task resume];
-}
 
 
 

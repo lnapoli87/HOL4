@@ -29,10 +29,10 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    self.author.text = self.currentMsg.From.EmailAddress;
-    self.subject.text = self.currentMsg.Subject;
-    self.date.text = self.currentMsg.DateTimeSent;
-    self.emailBody.text = self.currentMsg.Body.Content;
+    self.author.text = @"authorName";
+    self.subject.text = @"aSubjet";
+    self.date.text = @"aDate";
+    self.emailBody.text = @"aBodyContent";
 }
 
 - (void)didReceiveMemoryWarning {

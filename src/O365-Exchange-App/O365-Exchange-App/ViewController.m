@@ -89,22 +89,9 @@ NSString* token;
         dispatch_async(dispatch_get_main_queue(), ^{
             token = t;
             
-            MSDefaultDependencyResolver* resolver = [MSDefaultDependencyResolver alloc];
-            MSOAuthCredentials* credentials = [MSOAuthCredentials alloc];
-            [credentials addToken:token];
-            
-            MSCredentialsImpl* credentialsImpl = [MSCredentialsImpl alloc];
-            
-            [credentialsImpl setCredentials:credentials];
-            [resolver setCredentialsFactory:credentialsImpl];
-            [[resolver getLogger] log:@"Going to call client API" :(MSLogLevel *)VERBOSE];
-            
-            MSOutlookClient *client = [[MSOutlookClient alloc] initWitUrl:@"https://outlook.office365.com/api/v1.0" dependencyResolver:resolver];
-            
             FolderListViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"fileList"];
             controller.token = t;
-            controller.client = client;
-            
+           
             [self.navigationController pushViewController:controller animated:YES];
         });
     }];

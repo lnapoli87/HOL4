@@ -22,47 +22,32 @@
 		D94EB04819F6DDB600137259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D94EB03F19F6DDB600137259 /* Info.plist */; };
 		D94EB04919F6DDB600137259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EB04019F6DDB600137259 /* main.m */; };
 		D94EB04A19F6DDB600137259 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EB04219F6DDB600137259 /* ViewController.m */; };
-		D97AA8961A0112760044B940 /* office365_exchange_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97AA8921A0111D60044B940 /* office365_exchange_sdk.framework */; };
+		D9872D861A02888A00EAA452 /* liboffice365-base-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9872D711A0287ED00EAA452 /* liboffice365-base-sdk.a */; };
 		D9CB71BA19FFD61300830DD2 /* exchangelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CB71B919FFD61300830DD2 /* exchangelogo.png */; };
 		D9CB71BC19FFD76E00830DD2 /* exchangelogo -solo.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CB71BB19FFD76E00830DD2 /* exchangelogo -solo.png */; };
 		D9CB71C319FFDD5100830DD2 /* Explorer alt.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CB71C119FFDD5100830DD2 /* Explorer alt.png */; };
 		D9CB71C419FFDD5100830DD2 /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CB71C219FFDD5100830DD2 /* Mail.png */; };
 		D9CB71C719FFE51700830DD2 /* EmailDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB71C619FFE51700830DD2 /* EmailDetailViewController.m */; };
-		D9CB721C1A00165200830DD2 /* liboffice365-base-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CB72171A00164B00830DD2 /* liboffice365-base-sdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D97AA8911A0111D60044B940 /* PBXContainerItemProxy */ = {
+		D9872D701A0287ED00EAA452 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D97AA88C1A0111D60044B940 /* office365_exchange_sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2647EB0819F44D9D00FD9527;
-			remoteInfo = office365_exchange_sdk;
-		};
-		D97AA8941A0112700044B940 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D97AA88C1A0111D60044B940 /* office365_exchange_sdk.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2647EB0719F44D9D00FD9527;
-			remoteInfo = office365_exchange_sdk;
-		};
-		D9CB72161A00164B00830DD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */;
+			containerPortal = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EC0535E1197D9109009D45F4;
 			remoteInfo = "office365-base-sdk";
 		};
-		D9CB72181A00164B00830DD2 /* PBXContainerItemProxy */ = {
+		D9872D721A0287ED00EAA452 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */;
+			containerPortal = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EC0535F1197D9109009D45F4;
 			remoteInfo = "office365-base-sdkTests";
 		};
-		D9CB721A1A00164F00830DD2 /* PBXContainerItemProxy */ = {
+		D9872D831A02888400EAA452 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */;
+			containerPortal = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = EC0535E0197D9109009D45F4;
 			remoteInfo = "office365-base-sdk";
@@ -92,15 +77,13 @@
 		D94EB04019F6DDB600137259 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D94EB04119F6DDB600137259 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D94EB04219F6DDB600137259 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D97AA88C1A0111D60044B940 /* office365_exchange_sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = office365_exchange_sdk.xcodeproj; path = lib/office365_exchange_sdk/office365_exchange_sdk.xcodeproj; sourceTree = "<group>"; };
-		D97AA8971A0112760044B940 /* office365_odata_base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = office365_odata_base.framework; path = "lib/office365_odata_base/build/Debug-iphoneos/office365_odata_base.framework"; sourceTree = "<group>"; };
+		D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "office365-base-sdk.xcodeproj"; path = "lib/office365-base-sdk/office365-base-sdk.xcodeproj"; sourceTree = "<group>"; };
 		D9CB71B919FFD61300830DD2 /* exchangelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchangelogo.png; sourceTree = "<group>"; };
 		D9CB71BB19FFD76E00830DD2 /* exchangelogo -solo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exchangelogo -solo.png"; sourceTree = "<group>"; };
 		D9CB71C119FFDD5100830DD2 /* Explorer alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Explorer alt.png"; sourceTree = "<group>"; };
 		D9CB71C219FFDD5100830DD2 /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
 		D9CB71C519FFE51700830DD2 /* EmailDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailDetailViewController.h; sourceTree = "<group>"; };
 		D9CB71C619FFE51700830DD2 /* EmailDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailDetailViewController.m; sourceTree = "<group>"; };
-		D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "office365-base-sdk.xcodeproj"; path = "lib/office365-base-sdk/office365-base-sdk.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97AA8961A0112760044B940 /* office365_exchange_sdk.framework in Frameworks */,
-				D9CB721C1A00165200830DD2 /* liboffice365-base-sdk.a in Frameworks */,
+				D9872D861A02888A00EAA452 /* liboffice365-base-sdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +130,7 @@
 		D94220BD19E821ED00F0D350 = {
 			isa = PBXGroup;
 			children = (
-				D97AA8971A0112760044B940 /* office365_odata_base.framework */,
-				D97AA88C1A0111D60044B940 /* office365_exchange_sdk.xcodeproj */,
-				D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */,
+				D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */,
 				D94EB03619F6DDB600137259 /* O365-Exchange-App */,
 				D94220FC19E8248400F0D350 /* ADALiOSBundle */,
 				D94220C719E821ED00F0D350 /* Products */,
@@ -191,23 +171,14 @@
 				D94EB03F19F6DDB600137259 /* Info.plist */,
 				D94EB04019F6DDB600137259 /* main.m */,
 			);
-			name = "O365-Exchange-App";
-			path = "O365-Files-App";
+			path = "O365-Exchange-App";
 			sourceTree = "<group>";
 		};
-		D97AA88D1A0111D60044B940 /* Products */ = {
+		D9872D661A0287ED00EAA452 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D97AA8921A0111D60044B940 /* office365_exchange_sdk.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D9CB72121A00164B00830DD2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D9CB72171A00164B00830DD2 /* liboffice365-base-sdk.a */,
-				D9CB72191A00164B00830DD2 /* office365-base-sdkTests.xctest */,
+				D9872D711A0287ED00EAA452 /* liboffice365-base-sdk.a */,
+				D9872D731A0287ED00EAA452 /* office365-base-sdkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,8 +197,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D97AA8951A0112700044B940 /* PBXTargetDependency */,
-				D9CB721B1A00164F00830DD2 /* PBXTargetDependency */,
+				D9872D841A02888400EAA452 /* PBXTargetDependency */,
 			);
 			name = "O365-Exchange-App";
 			productName = "AD-Auth-iOS-App";
@@ -261,12 +231,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D9CB72121A00164B00830DD2 /* Products */;
-					ProjectRef = D9CB72111A00164B00830DD2 /* office365-base-sdk.xcodeproj */;
-				},
-				{
-					ProductGroup = D97AA88D1A0111D60044B940 /* Products */;
-					ProjectRef = D97AA88C1A0111D60044B940 /* office365_exchange_sdk.xcodeproj */;
+					ProductGroup = D9872D661A0287ED00EAA452 /* Products */;
+					ProjectRef = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -277,25 +243,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D97AA8921A0111D60044B940 /* office365_exchange_sdk.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = office365_exchange_sdk.framework;
-			remoteRef = D97AA8911A0111D60044B940 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D9CB72171A00164B00830DD2 /* liboffice365-base-sdk.a */ = {
+		D9872D711A0287ED00EAA452 /* liboffice365-base-sdk.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "liboffice365-base-sdk.a";
-			remoteRef = D9CB72161A00164B00830DD2 /* PBXContainerItemProxy */;
+			remoteRef = D9872D701A0287ED00EAA452 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D9CB72191A00164B00830DD2 /* office365-base-sdkTests.xctest */ = {
+		D9872D731A0287ED00EAA452 /* office365-base-sdkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "office365-base-sdkTests.xctest";
-			remoteRef = D9CB72181A00164B00830DD2 /* PBXContainerItemProxy */;
+			remoteRef = D9872D721A0287ED00EAA452 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -341,15 +300,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D97AA8951A0112700044B940 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = office365_exchange_sdk;
-			targetProxy = D97AA8941A0112700044B940 /* PBXContainerItemProxy */;
-		};
-		D9CB721B1A00164F00830DD2 /* PBXTargetDependency */ = {
+		D9872D841A02888400EAA452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "office365-base-sdk";
-			targetProxy = D9CB721A1A00164F00830DD2 /* PBXContainerItemProxy */;
+			targetProxy = D9872D831A02888400EAA452 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -468,7 +422,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/office365_odata_base/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/O365-Files-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/O365-Exchange-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "O365-Exchange-App";
@@ -484,7 +438,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/office365_odata_base/build/Debug-iphoneos",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/O365-Files-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/O365-Exchange-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "O365-Exchange-App";
