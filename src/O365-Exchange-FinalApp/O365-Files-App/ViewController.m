@@ -37,10 +37,15 @@ NSString* token;
     resourceId = [NSString alloc];
     clientId = [NSString alloc];
     redirectUriString = [NSString alloc];
-    authority = @"https://login.windows.net/common";
-    redirectUriString = @"http://iossdkhol.hexacta.com";
-    resourceId = @"https://outlook.office365.com";
-    clientId = @"4c0b7730-2ed7-44d1-ba58-c1ec15c61326";
+
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Auth" ofType:@"plist"];
+    NSDictionary *content = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    authority = [content objectForKey:@"authority"];
+    resourceId = [content objectForKey:@"resourceId"];
+    clientId = [content objectForKey:@"clientId"];
+    redirectUriString = [content objectForKey:@"redirectUriString"];
+    
     token = [NSString alloc];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
@@ -99,7 +104,12 @@ NSString* token;
             [resolver setCredentialsFactory:credentialsImpl];
             [[resolver getLogger] log:@"Going to call client API" :(MSLogLevel *)VERBOSE];
             
-            MSOutlookClient *client = [[MSOutlookClient alloc] initWitUrl:@"https://outlook.office365.com/api/v1.0" dependencyResolver:resolver];
+            
+            NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Auth" ofType:@"plist"];
+            NSString* urlApi = [NSString alloc];
+            urlApi = [[NSDictionary dictionaryWithContentsOfFile:plistPath] objectForKey:@"o365APITenantUrl"];
+            
+            MSOutlookClient *client = [[MSOutlookClient alloc] initWitUrl:urlApi dependencyResolver:resolver];
             
             FolderListViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"fileList"];
             controller.token = t;
