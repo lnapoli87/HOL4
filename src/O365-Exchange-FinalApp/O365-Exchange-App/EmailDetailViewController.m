@@ -32,10 +32,13 @@
     self.author.text = self.currentMsg.From.EmailAddress.Name;
     self.subject.text = self.currentMsg.Subject;
     
-    self.emailBody.numberOfLines = 0;
+    /*
+     self.emailBody.numberOfLines = 0;
     [self.emailBody sizeToFit];
     self.emailBody.text = self.currentMsg.Body.Content;
-    
+    */
+    [self.emailBody loadHTMLString:self.currentMsg.Body.Content  baseURL: nil];
+
     NSDate *msgDate = self.currentMsg.DateTimeSent;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

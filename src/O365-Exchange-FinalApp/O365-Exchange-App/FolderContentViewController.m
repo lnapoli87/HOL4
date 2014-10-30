@@ -58,7 +58,9 @@ NSArray<MSOutlookMessage> *folderMessages;
     MSOutlookMessage *msg = [folderMessages objectAtIndex:indexPath.row];
     
     cell.title.text = msg.From.EmailAddress.Name;
-    cell.subtitle.text = msg.BodyPreview;
+
+    cell.subtitle.text = [msg.BodyPreview substringToIndex:30];
+    
     
     return cell;
 }
