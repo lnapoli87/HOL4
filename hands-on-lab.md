@@ -50,7 +50,7 @@ and create a client class with empty methods in it to handle the requests to the
 
     ```
     Application:
-    You will se a login page with buttons to access the application and to clear credentials.
+    You will see a login page with buttons to access the application and to clear credentials.
     Once authenticated, the mailbox folders list will appear with one fake entry. Selecting one,
     you will see the emails inside the folder, and also check each email.
 
