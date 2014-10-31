@@ -248,7 +248,7 @@ in the server side using OData queries and filters.
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.currentFolder= [folders objectAtIndex:indexPath.row];
+    currentFolder= [folders objectAtIndex:indexPath.row];
     
     [self performSegueWithIdentifier:@"detail" sender:self];
 }
@@ -265,7 +265,7 @@ in the server side using OData queries and filters.
 01. In **FolderListViewController.m** file, uncomment the **prepareForSegue:sender:**
 
     ```
-    //controller.currentFolder = self.currentFolder;
+    //controller.currentFolder = currentFolder;
     ```
 
     And add a property to hold the folder in **FolderContentViewController.h**
@@ -310,7 +310,7 @@ in the server side using OData queries and filters.
 
     ```
     -(void) viewWillAppear:(BOOL)animated{
-    self.currentMsg = nil;
+    currentMsg = nil;
     [self getFolderContent];
 }
     ```
