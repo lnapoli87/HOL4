@@ -383,7 +383,7 @@ in the server side using OData queries and filters.
     //controller.currentMsg = currentMsg;
     ```
 
-03. In the **viewDidLoad** method, set the values for de labels and the email body, showing the html code in a proper way to the user
+03. In the **viewDidLoad** method, set the values for labels and the email body showing the html code in a proper way to the user
 
     ```
     self.author.text = self.currentMsg.From.EmailAddress.Name;
