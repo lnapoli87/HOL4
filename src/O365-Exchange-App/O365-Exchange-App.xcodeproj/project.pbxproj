@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7DBBE0101A028D7E00CF7D7F /* Auth.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBBE00F1A028D7E00CF7D7F /* Auth.plist */; };
-		7DBBE0211A028ECD00CF7D7F /* libADALiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBBE01A1A028EB700CF7D7F /* libADALiOS.a */; };
 		D90A56DE19FA6FFC00F4F476 /* office365.png in Resources */ = {isa = PBXBuildFile; fileRef = D90A56DD19FA6FFC00F4F476 /* office365.png */; };
 		D90A56E419FA73F100F4F476 /* FolderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A56E319FA73F100F4F476 /* FolderListViewController.m */; };
 		D90A56E719FA741E00F4F476 /* FileListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A56E619FA741E00F4F476 /* FileListCellTableViewCell.m */; };
@@ -33,34 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7DBBE0191A028EB700CF7D7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B0965AA17F25770002BDFB8;
-			remoteInfo = ADALiOS;
-		};
-		7DBBE01B1A028EB700CF7D7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B0965BA17F25770002BDFB8;
-			remoteInfo = ADALiOSTests;
-		};
-		7DBBE01D1A028EB700CF7D7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BFEF05C182DA57800122C0C;
-			remoteInfo = ADALiOSBundle;
-		};
-		7DBBE01F1A028EC500CF7D7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B0965A917F25770002BDFB8;
-			remoteInfo = ADALiOS;
-		};
 		D9872D701A0287ED00EAA452 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
@@ -86,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		7DBBE00F1A028D7E00CF7D7F /* Auth.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth.plist; sourceTree = "<group>"; };
-		7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ADALiOS.xcodeproj; path = lib/ADALiOS/ADALiOS.xcodeproj; sourceTree = "<group>"; };
 		D90A56DD19FA6FFC00F4F476 /* office365.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office365.png; sourceTree = "<group>"; };
 		D90A56E219FA73F100F4F476 /* FolderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderListViewController.h; sourceTree = "<group>"; };
 		D90A56E319FA73F100F4F476 /* FolderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderListViewController.m; sourceTree = "<group>"; };
@@ -123,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DBBE0211A028ECD00CF7D7F /* libADALiOS.a in Frameworks */,
 				D9872D861A02888A00EAA452 /* liboffice365-base-sdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,16 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7DBBE0131A028EB600CF7D7F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7DBBE01A1A028EB700CF7D7F /* libADALiOS.a */,
-				7DBBE01C1A028EB700CF7D7F /* ADALiOSTests.xctest */,
-				7DBBE01E1A028EB700CF7D7F /* ADALiOS.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D90A56E819FA747F00F4F476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +132,6 @@
 		D94220BD19E821ED00F0D350 = {
 			isa = PBXGroup;
 			children = (
-				7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */,
 				D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */,
 				D94EB03619F6DDB600137259 /* O365-Exchange-App */,
 				D94220FC19E8248400F0D350 /* ADALiOSBundle */,
@@ -242,7 +200,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7DBBE0201A028EC500CF7D7F /* PBXTargetDependency */,
 				D9872D841A02888400EAA452 /* PBXTargetDependency */,
 			);
 			name = "O365-Exchange-App";
@@ -277,10 +234,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7DBBE0131A028EB600CF7D7F /* Products */;
-					ProjectRef = 7DBBE0121A028EB600CF7D7F /* ADALiOS.xcodeproj */;
-				},
-				{
 					ProductGroup = D9872D661A0287ED00EAA452 /* Products */;
 					ProjectRef = D9872D651A0287ED00EAA452 /* office365-base-sdk.xcodeproj */;
 				},
@@ -293,27 +246,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7DBBE01A1A028EB700CF7D7F /* libADALiOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libADALiOS.a;
-			remoteRef = 7DBBE0191A028EB700CF7D7F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7DBBE01C1A028EB700CF7D7F /* ADALiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ADALiOSTests.xctest;
-			remoteRef = 7DBBE01B1A028EB700CF7D7F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7DBBE01E1A028EB700CF7D7F /* ADALiOS.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ADALiOS.bundle;
-			remoteRef = 7DBBE01D1A028EB700CF7D7F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D9872D711A0287ED00EAA452 /* liboffice365-base-sdk.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -372,11 +304,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7DBBE0201A028EC500CF7D7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ADALiOS;
-			targetProxy = 7DBBE01F1A028EC500CF7D7F /* PBXContainerItemProxy */;
-		};
 		D9872D841A02888400EAA452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "office365-base-sdk";
