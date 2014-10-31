@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FileListCellTableViewCell : UITableViewCell
+@interface EmailListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *subtitle;
 

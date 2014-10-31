@@ -7,7 +7,7 @@
 //
 
 #import "FolderListViewController.h"
-#import "FileListCellTableViewCell.h"
+#import "EmailListTableViewCell.h"
 #import "FolderContentViewController.h"
 
 @interface FolderListViewController ()
@@ -63,7 +63,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* identifier = @"folderListCell";
-    FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
+    EmailListTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
     cell.title.text = @"aFolder";
     

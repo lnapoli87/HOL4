@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 MS Open Tech. All rights reserved.
 //
 
-#import "FileListCellTableViewCell.h"
+#import "EmailListTableViewCell.h"
 
-@implementation FileListCellTableViewCell
+@implementation EmailListTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

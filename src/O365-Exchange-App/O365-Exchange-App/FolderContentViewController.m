@@ -7,7 +7,7 @@
 //
 
 #import "FolderContentViewController.h"
-#import "FileListCellTableViewCell.h"
+#import "EmailListTableViewCell.h"
 #import "EmailDetailViewController.h"
 
 @interface FolderContentViewController ()
@@ -48,8 +48,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString* identifier = @"fileListCell";
-    FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
+    NSString* identifier = @"msgListCell";
+    EmailListTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
     cell.title.text = @"sender";
     cell.subtitle.text = @"bodyPreview";

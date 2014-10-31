@@ -228,7 +228,7 @@ in the server side using OData queries and filters.
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* identifier = @"folderListCell";
-    FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
+    EmailListTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
     MSOutlookFolder *cellFolder = (MSOutlookFolder*)[folders objectAtIndex: indexPath.row];
     cell.title.text = cellFolder.DisplayName;
@@ -324,7 +324,7 @@ in the server side using OData queries and filters.
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString* identifier = @"msgListCell";
-    FileListCellTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
+    EmailListTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: identifier ];
     
     MSOutlookMessage *msg = [folderMessages objectAtIndex:indexPath.row];
     
