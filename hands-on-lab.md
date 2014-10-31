@@ -27,9 +27,9 @@ The hands-on lab includes the following exercises:
 - [Connect actions in the view to ExchangeClient class](#exercise3)
 
 <a name="exercise1"></a>
-##Exercise 1: Add O365 iOS lists sdk library to a project
-In this exercise you will use an existing application with the AzureAD authentication included, to add the O365 lists sdk library in the project
-and create a client class with empty methods in it to handle the requests to the Sharepoint tenant.
+##Exercise 1: Add O365 iOS Exchange sdk library to a project
+In this exercise you will use an existing application with the AzureAD authentication included, to add the O365 Exchange sdk library in the project
+and create a client class with empty methods in it to handle the requests to the Outlook tenant.
 
 ###Task 1 - Open the Project
 01. Download the starting point App:
@@ -38,11 +38,11 @@ and create a client class with empty methods in it to handle the requests to the
     git clone 
     ```
 
-02. Open the **.xcodeproj** file in the O365-lists-app
+02. Open the **.xcodeproj** file in the O365-Exchange-App
 
-03. Find and Open the **ViewController.m** class under **O365-lists-app/controllers/login/**
+03. Find and Open the **Auth.plist** file.
 
-04. Fill the AzureAD account settings in the **viewDidLoad** method
+04. Fill the AzureAD account settings in the properties
     
     ![](img/fig.01.png)
 
@@ -51,20 +51,16 @@ and create a client class with empty methods in it to handle the requests to the
     ```
     Application:
     You will se a login page with buttons to access the application and to clear credentials.
-    Once authenticated, a Project list will appear with one fake entry. Also there is an add 
-    Project screen (tapping the plus sign), and a Project Details screen (selecting a row in 
-    the table) with References that contains a Title, Comments and a Url that can be opened
-    in Safari app. Finally we can access to the screens to manage the References.
+    Once authenticated, the mailbox folders list will appear with one fake entry. Selecting one,
+    you will see the emails inside the folder, and also check each email.
 
     Environment:
-    To manage Projects and its References, we have two lists called "Research Projects" and 
-    "Research References" in a Office365 Sharepoint tenant.
-    Also we have permissions to add, edit and delete items from a list.
-    We will use a files-sdk in order to access the environment using two classes called 
-    "ListEntity" and "ListItem" that have all necesary data to manage the content.
+    With the credentials settings we can access to the client user mailbox through the Outlook 
+    Exchange tenant, and will be able to implement every single details of a complete email app,
+    only using the O365-Exchange sdk
     ```
 
-    ![](img/fig.08.png)
+    ![](img/fig.02.png)
 
 ###Task 2 - Import the library
 01. Download a copy of the library using the terminal:
@@ -73,33 +69,29 @@ and create a client class with empty methods in it to handle the requests to the
     git clone 
     ```
 
-02. Open the downloaded folder and copy **office365-lists-sdk** folder under **Sdk-ObjectiveC**. Paste it in a lib folder inside our project path.
+02. Open the downloaded folder and copy **office365_exchange_sdk**, **office365_odata_base**, **office365_odata_impl** and **office365_odata_interfaces** folders under **Sdk-ObjectiveC**. Paste it in a lib folder inside our project path.
 
-    ![](img/fig.02.png)
-
-03. Drag the **office365-lists-sdk.xcodeproj** file into XCode under our application project.
-    
     ![](img/fig.03.png)
+
+03. Drag the **office365-exchange-sdk.xcodeproj** file into XCode under our application project.
+    
+    ![](img/fig.04.png)
 
 05. Go to project settings selecting the first file from the files explorer. Then click on **Build Phases** and add an entry in the **Target Dependencies** section.
 
-    ![](img/fig.04.png)
-
-06. Select the **office365-lists-sdk** library dependency.
-
     ![](img/fig.05.png)
 
-07. Under **Link Binary with Libraries** add an entry pointing to **office365-lists-sdk.a** file
+06. Select the **office365-exchange-sdk** library dependency.
 
-    ![](img/fig.06.png) 
+    ![](img/fig.06.png)
 
-08. Follow 05-07 steps again, this time for the **Extension target**.
+07. Under **Link Binary with Libraries** add an entry pointing to **office365_exchange_sdk.framework** file
 
-    ![](img/fig.15.png)
+    ![](img/fig.07.png) 
 
 08. Build and Run the application to check everything is ok.
 
-    ![](img/fig.07.png)
+    ![](img/fig.08.png)
 
 <a name="exercise2"></a>
 ##Exercise 2: Create a Client class for all operations
