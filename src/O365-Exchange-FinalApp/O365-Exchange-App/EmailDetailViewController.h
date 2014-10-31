@@ -18,5 +18,4 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UIWebView *emailBody;
-//@property (weak, nonatomic) IBOutlet UILabel *emailBody;
 @end

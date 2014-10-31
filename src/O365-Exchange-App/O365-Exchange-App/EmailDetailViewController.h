@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UILabel *subject;
 @property (weak, nonatomic) IBOutlet UILabel *date;
-@property (weak, nonatomic) IBOutlet UILabel *emailBody;
+@property (weak, nonatomic) IBOutlet UIWebView *emailBody;
+
 @end

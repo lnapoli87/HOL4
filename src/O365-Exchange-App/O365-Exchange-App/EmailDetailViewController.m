@@ -32,7 +32,10 @@
     self.author.text = @"authorName";
     self.subject.text = @"aSubjet";
     self.date.text = @"aDate";
-    self.emailBody.text = @"aBodyContent";
+    //self.emailBody.text = @"aBodyContent";
+    
+//    [self.emailBody loadHTMLString:self.currentMsg.Body.Content  baseURL: nil];
+    [self.emailBody loadHTMLString:@"aBodyContent"  baseURL: nil];
 }
 
 - (void)didReceiveMemoryWarning {

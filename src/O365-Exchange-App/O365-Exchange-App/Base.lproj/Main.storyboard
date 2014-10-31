@@ -155,18 +155,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="fay-qE-A28">
-                                <rect key="frame" x="0.0" y="122" width="600" height="478"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="emailBody" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvQ-ZC-qLM">
-                                        <rect key="frame" x="8" y="8" width="81" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjc-3Z-Nw2">
                                 <rect key="frame" x="0.0" y="20" width="600" height="94"/>
                                 <subviews>
@@ -194,23 +182,23 @@
                                     <constraint firstAttribute="height" constant="94" id="jHF-in-hpR"/>
                                 </constraints>
                             </view>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFU-J8-leQ">
+                                <rect key="frame" x="-8" y="122" width="608" height="478"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.92779806389999997" green="0.92779806389999997" blue="0.92779806389999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fay-qE-A28" firstAttribute="top" secondItem="Wjc-3Z-Nw2" secondAttribute="bottom" id="IX2-xb-EAg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fay-qE-A28" secondAttribute="trailing" constant="-16" id="JOL-xK-Sfs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wjc-3Z-Nw2" secondAttribute="trailing" constant="-16" id="LqC-yy-bqW"/>
                             <constraint firstItem="Wjc-3Z-Nw2" firstAttribute="leading" secondItem="C28-hg-sZU" secondAttribute="leadingMargin" constant="-16" id="MvM-CG-lQl"/>
                             <constraint firstItem="Wjc-3Z-Nw2" firstAttribute="top" secondItem="N3q-UD-6gf" secondAttribute="bottom" id="XOs-Yn-vhl"/>
-                            <constraint firstItem="CDU-c4-XsR" firstAttribute="top" secondItem="fay-qE-A28" secondAttribute="bottom" id="gnF-8F-Jue"/>
-                            <constraint firstItem="fay-qE-A28" firstAttribute="leading" secondItem="C28-hg-sZU" secondAttribute="leadingMargin" constant="-16" id="jqS-9y-c99"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6T4-Ev-SPO" userLabel="Email Content"/>
                     <connections>
                         <outlet property="author" destination="Nob-wI-khr" id="kbP-PT-I6r"/>
                         <outlet property="date" destination="pae-EG-dEu" id="X47-vu-JRI"/>
-                        <outlet property="emailBody" destination="lvQ-ZC-qLM" id="H0A-sk-HF4"/>
+                        <outlet property="emailBody" destination="AFU-J8-leQ" id="If5-WO-y1P"/>
                         <outlet property="subject" destination="Wne-g1-fzn" id="93I-81-byc"/>
                     </connections>
                 </viewController>
