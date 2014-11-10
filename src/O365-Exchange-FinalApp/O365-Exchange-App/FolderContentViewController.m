@@ -1,11 +1,3 @@
-//
-//  FileDetailsViewController.m
-//  O365-Files-App
-//
-//  Created by Lucas Damian Napoli on 24/10/14.
-//  Copyright (c) 2014 MS Open Tech. All rights reserved.
-//
-
 #import "FolderContentViewController.h"
 #import "FileListCellTableViewCell.h"
 #import "EmailDetailViewController.h"
@@ -99,7 +91,7 @@ NSArray<MSOutlookMessage> *folderMessages;
     spinner.hidesWhenStopped = YES;
     [spinner startAnimating];
     
-    NSURLSessionTask* task = [[[[[self.client getMe] getFolders] getById:self.currentFolder.Id] getMessages] execute:^(NSArray<MSOutlookMessage> *resultMessages, NSError *error) {
+    NSURLSessionTask* task = [[[[[self.client getMe] getFolders] getById:self.currentFolder.Id] getMessages] read:^(NSArray<MSOutlookMessage> *resultMessages, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(),
                        ^{

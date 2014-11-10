@@ -1,11 +1,3 @@
-//
-//  FileListViewController.m
-//  O365-Files-App
-//
-//  Created by Lucas Damian Napoli on 24/10/14.
-//  Copyright (c) 2014 MS Open Tech. All rights reserved.
-//
-
 #import "FolderListViewController.h"
 #import "FileListCellTableViewCell.h"
 #import "FolderContentViewController.h"
@@ -105,7 +97,7 @@ NSArray<MSOutlookFolder> *folders;
     spinner.hidesWhenStopped = YES;
     [spinner startAnimating];
     
-    NSURLSessionTask* task = [[[self.client getMe] getFolders] execute:^(NSArray<MSOutlookFolder> *resultFolders, NSError *error) {
+    NSURLSessionTask* task = [[[self.client getMe] getFolders] read:^(NSArray<MSOutlookFolder> *resultFolders, NSError *error) {
         
             dispatch_async(dispatch_get_main_queue(),
                            ^{
