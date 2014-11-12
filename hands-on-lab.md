@@ -32,13 +32,9 @@ In this exercise you will use an existing application with the AzureAD authentic
 and create a client class with empty methods in it to handle the requests to the Outlook tenant.
 
 ###Task 1 - Open the Project
-01. Download the starting point App:
+01. Clone this git repository
 
-    ```
-    git clone 
-    ```
-
-02. Open the **.xcodeproj** file in the O365-Exchange-App
+02. Open the **.xcodeproj** file in the **src/O365-Exchange-App** folder
 
 03. Find and Open the **Auth.plist** file.
 
@@ -63,33 +59,25 @@ and create a client class with empty methods in it to handle the requests to the
     ![](img/fig.02.png)
 
 ###Task 2 - Import the library
-01. Download a copy of the library using the terminal:
+01. On Finder, open the **Podfile** file under the root folder of the project and add the line:
 
     ```
-    git clone 
+    pod 'Office365', '~>0.5.4'
     ```
 
-02. Open the downloaded folder and copy **office365_exchange_sdk**, **office365_odata_base**, **office365_odata_impl** and **office365_odata_interfaces** folders under **Sdk-ObjectiveC**. Paste it in a lib folder inside our project path.
+02. Open a Terminal and navigate to the root folder of the project. Execute the following:
 
-    ![](img/fig.03.png)
+    ```
+    pod install
+    ```
 
-03. Drag the **office365-exchange-sdk.xcodeproj** file into XCode under our application project.
-    
-    ![](img/fig.04.png)
+03. Go to project settings selecting the first file from the files explorer. Then click on **Build Phases** section.
 
-05. Go to project settings selecting the first file from the files explorer. Then click on **Build Phases** and add an entry in the **Target Dependencies** section.
+04. Under **Link Binary with Libraries** add an entry pointing to **office365-exchange-sdk.a** file
 
-    ![](img/fig.05.png)
+    ![](img/fig.07.png)
 
-06. Select the **office365-exchange-sdk** library dependency.
-
-    ![](img/fig.06.png)
-
-07. Under **Link Binary with Libraries** add an entry pointing to **office365_exchange_sdk.framework** file
-
-    ![](img/fig.07.png) 
-
-08. Build and Run the application to check everything is ok.
+05. Build and Run the application to check everything is ok.
 
     ![](img/fig.08.png)
 
