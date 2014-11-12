@@ -17,6 +17,7 @@ The lab lets students use an AzureAD account to manage an Exchange mailbox in a 
 - XCode developer tools (it will install git integration from XCode and the terminal)
 - You must have a Windows Azure subscription to complete this lab.
 - You must have completed Module 04 and linked your Azure subscription with your O365 tenant.
+- You must have Cocoapods dependencies manager already installed on the Mac. (cocoapods.org)
 
 ##Exercises
 
