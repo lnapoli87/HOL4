@@ -35,7 +35,13 @@ and create a client class with empty methods in it to handle the requests to the
 ###Task 1 - Open the Project
 01. Clone this git repository
 
-02. Open the **.xcodeproj** file in the **src/O365-Exchange-App** folder
+02. Open a Terminal and navigate to the root folder of the project. Execute the following:
+
+    ```
+    pod install
+    ```
+
+02. Open the **.xcworkspace** file in the **src/O365-Exchange-App** folder
 
 03. Find and Open the **Auth.plist** file.
 
